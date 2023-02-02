@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Projects</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/ceb36731d2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="projects-wrapper">
+        <div class="project project-1 todo-project">
+            <h4 class="project-number">1</h4>
+            <h1>To Do List:</h1>
+
+            <div class="todo-items">
+                <div class="todo-item">
+                    <p class="to-do">Just a test item</p>
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" class="checkbox" onchange="changeTick(this)">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="add-item">
+                <input type="text" placeholder="Add item..." class="add-item-input">
+                <i class="fa-solid fa-plus"
+                    onclick="addItem(document.getElementsByClassName('add-item-input')[0].value)"></i>
+            </div>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
