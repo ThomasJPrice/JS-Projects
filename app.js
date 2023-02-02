@@ -1,5 +1,5 @@
 // TODO LIST PROJECT
-todos = []
+// todos = []
 
 function addItem(item) {
     // CLEARING INPUT
@@ -34,10 +34,10 @@ function updateTodos(todos) {
     todosWrapper.innerHTML = ''
 
     localStorage.setItem('todos', todos)
-    var todos = localStorage.getItem('todos').split(',')
 
     for (let i = 0; i < todos.length; i++) {
         if (todos[i].replace(/\s/g, '') !== '') {
+            console.log(todos[i]);
             var wrapper = document.createElement("div")
             wrapper.classList.add('todo-item')
 
@@ -66,5 +66,7 @@ function updateTodos(todos) {
         }
     }
 }
+
+var todos = localStorage.getItem('todos').split(',')
 
 updateTodos(todos)
