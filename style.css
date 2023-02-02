@@ -13,10 +13,12 @@ body {
 }
 
 .projects-wrapper {
-    display: grid;
     gap: 20px;
-    grid-template-columns: auto auto auto auto auto auto auto auto auto;
     padding: 20px;
+
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 /* STYLING PROJECT */
@@ -28,13 +30,17 @@ body {
     border-radius: 10px;
     padding: 10px;
     overflow: hidden;
+
+    background: #000814;
+    box-shadow: 0px 5px 20px 1px #000814;
 }
 
 .project-number {
     position: absolute;
     top: 0;
     right: 0;
-    background: #fff;
+    background: #ffc300;
+    color: #003566;
     width: 30px;
     height: 30px;
     display: flex;
@@ -47,19 +53,13 @@ body {
 
 /* TO DO PROJECT */
 
-.todo-project {
-    background: #000814;
-    box-shadow: 0px 5px 20px 1px #000814;
+.project-1 {
+    grid-column: 1 / 5;
 }
 
 .todo-project h1 {
     color: #ffc300;
     margin-bottom: 20px;
-}
-
-.todo-project .project-number {
-    background: #ffc300;
-    color: #003566;
 }
 
 .add-item {
@@ -70,6 +70,7 @@ body {
 
     background-color: #001d3d;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 .add-item i {
@@ -87,6 +88,15 @@ body {
     font-size: 20px;
     color: #ffc300;
     padding: 10px;
+}
+
+.clear-list {
+    color: #ffc300;
+    cursor: pointer;
+}
+
+.clear-list:hover {
+    text-decoration: underline;
 }
 
 .todo-items {
@@ -138,4 +148,39 @@ body {
 
 .ticked + i  {
     opacity: 1;
+}
+
+.empty-list {
+    color: #ffc300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+}
+
+/* CLOCK PROJECT */
+.clock-project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 5 / 7;
+}
+
+#time {
+    color: #ffc300;
+    width: 100%;
+    padding-right: 30px;
+}
+
+/* DATE PROJECT */
+.date-project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#date {
+    color: #ffc300;
+    width: 100%;
+    padding-right: 30px;
 }
